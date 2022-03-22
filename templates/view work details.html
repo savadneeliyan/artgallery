@@ -1,0 +1,26 @@
+{% extends 'workindex/view work index camera.html' %}
+{% block body %}
+
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <table width="200" border="1">
+    <tr>
+      <th scope="col"> img </th>
+      <th scope="col"> name</th>
+      <th scope="col">price</th>
+      <th scope="col">&nbsp;</th>
+    </tr>
+    {% for i in data %}
+
+    <tr>
+      <td><img src="{{i.art.url}}" width="100"/>&nbsp;</td>
+      <td>&nbsp;{{i.name}}</td>
+      <td>&nbsp;{{i.price}}</td>
+      <td><a href="{% url 'orderrt1' id=i.id %}">order</a></td>
+    </tr>
+    {% endfor %}
+  </table>
+</form>
+</body>
+</html>
+{% endblock %}

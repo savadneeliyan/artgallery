@@ -1,0 +1,449 @@
+{% load static %}
+<html lang="en">
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>online cart</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400" rel="stylesheet" /> <!-- https://fonts.google.com/ -->
+    <link href="{% static 'css/bootstrap.min.css" rel="stylesheet' %}" /> <!-- https://getbootstrap.com/ -->
+    <link href="{% static 'fontawesome/css/all.min.css" rel="stylesheet' %}" /> <!-- https://fontawesome.com/ -->
+    <link href="{% static 'slick/slick.css' %}" rel='stylesheet' /> <!-- https://kenwheeler.github.io/slick/ -->
+    <link href="{% static 'slick/slick-theme.css' %}" rel='stylesheet' />
+    <link href="{% static 'css/templatemo-real-dynamic.css' %}" rel="stylesheet" />
+<!--
+
+TemplateMo 547 Real Dynamic
+
+https://templatemo.com/tm-547-real-dynamic
+
+-->
+<style>
+@import url(http://fonts.googleapis.com/css?family=Exo:100,200,400);
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:700,400,300);
+
+body{
+	margin: 0;
+	padding: 0;
+	background: #fff;
+
+	color: #fff;
+	font-family: Arial;
+	font-size: 12px;
+}
+
+.body{
+	position: absolute;
+	top: -20px;
+	left: -20px;
+	right: -40px;
+	bottom: -40px;
+	width: auto;
+	height: auto;
+	background-image: url(http://ginva.com/wp-content/uploads/2012/07/city-skyline-wallpapers-008.jpg);
+	background-size: cover;
+	-webkit-filter: blur(5px);
+	z-index: 0;
+}
+
+.grad{
+	position: absolute;
+	top: -20px;
+	left: -20px;
+	right: -40px;
+	bottom: -40px;
+	width: auto;
+	height: auto;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))); /* Chrome,Safari4+ */
+	z-index: 1;
+	opacity: 0.7;
+}
+
+.header{
+	position: absolute;
+	top: calc(50% - 35px);
+	left: calc(50% - 255px);
+	z-index: 2;
+}
+
+.header div{
+	float: left;
+	color: #fff;
+	font-family: 'Exo', sans-serif;
+	font-size: 35px;
+	font-weight: 200;
+}
+
+.header div span{
+	color: #5379fa !important;
+}
+
+.login{
+	position: absolute;
+	top: calc(50% - 75px);
+	left: calc(50% - 50px);
+	height: 150px;
+	width: 350px;
+	padding: 10px;
+	z-index: 2;
+}
+
+.login input[type=text]{
+	width: 250px;
+	height: 30px;
+	background: transparent;
+	border: 1px solid rgba(255,255,255,0.6);
+	border-radius: 2px;
+	color: #fff;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 4px;
+}
+
+.login input[type=password]{
+	width: 250px;
+	height: 30px;
+	background: transparent;
+	border: 1px solid rgba(255,255,255,0.6);
+	border-radius: 2px;
+	color: #fff;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 4px;
+	margin-top: 10px;
+}
+
+.login input[type=button]{
+	width: 260px;
+	height: 35px;
+	background: #fff;
+	border: 1px solid #fff;
+	cursor: pointer;
+	border-radius: 2px;
+	color: #a18d6c;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 6px;
+	margin-top: 10px;
+}
+
+.login input[type=button]:hover{
+	opacity: 0.8;
+}
+
+.login input[type=button]:active{
+	opacity: 0.6;
+}
+
+.login input[type=text]:focus{
+	outline: none;
+	border: 1px solid rgba(255,255,255,0.9);
+}
+
+.login input[type=password]:focus{
+	outline: none;
+	border: 1px solid rgba(255,255,255,0.9);
+}
+
+.login input[type=button]:focus{
+	outline: none;
+}
+
+::-webkit-input-placeholder{
+   color: rgba(255,255,255,0.6);
+}
+
+::-moz-input-placeholder{
+   color: rgba(255,255,255,0.6);
+}
+</style>
+
+    <script src="js/prefixfree.min.js"></script>
+
+</head>
+
+
+
+<body>
+<form action="/loginpress" method="post">
+
+  <div class="body"></div>
+		<div class="grad"></div>
+		<div class="header">
+			<div>Site<span>Random</span></div>
+		</div>
+		<br>
+
+	  <div class="login">
+
+				{% block body %}{% endblock %}
+
+		</div>
+
+
+
+  <script src='http://codepen.io/assets/libs/fullpage/jquery.js'></script>
+</form>
+
+    <!--<div class="tm-container">-->
+        <!--<div class="tm-site-header"></div> &lt;!&ndash; tm-site-header &ndash;&gt;-->
+        <!--<div class="tm-site-header-overlay">-->
+            <!--<div class="tm-header-stripe ml-auto"></div>-->
+            <!--<div class="tm-header-stripe tm-header-stripe-short ml-auto"></div>-->
+            <!--<div class="container-fluid">-->
+                <!--<div class="row">-->
+                    <!--<div class="col-lg-4 tm-site-header-left">-->
+                        <!--<h1 class="text-uppercase tm-site-name">Real Dynamic</h1>-->
+                        <!--<p class="text-white mb-0 tm-site-desc">New Fluid HTML Template</p>-->
+                    <!--</div>-->
+                    <!--<div class="col-lg-8 tm-site-header-right">-->
+                        <!--&lt;!&ndash;Navbar&ndash;&gt;-->
+                        <!--<nav class="navbar navbar-expand-lg">-->
+                            <!--&lt;!&ndash; Collapse button &ndash;&gt;-->
+                            <!--<button class="navbar-toggler toggler-example" type="button" data-toggle="collapse"-->
+                                <!--data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"-->
+                                <!--aria-label="Toggle navigation"><span class="dark-blue-text"><i-->
+                                        <!--class="fas fa-bars text-white"></i></span></button>-->
+                            <!--&lt;!&ndash; Collapsible content &ndash;&gt;-->
+                            <!--<div class="collapse navbar-collapse tm-nav" id="navbarNav">-->
+                                <!--&lt;!&ndash; Links &ndash;&gt;-->
+                                <!--<ul class="navbar-nav ml-auto">-->
+                                    <!--<li class="nav-item active">-->
+                                        <!--<a class="nav-link tm-nav-link" href="#">Home <span class="sr-only">(current)</span></a>-->
+                                    <!--</li>-->
+                                    <!--<li class="nav-item">-->
+                                        <!--<a class="nav-link tm-nav-link" href="about.html">About</a>-->
+                                    <!--</li>-->
+                                    <!--<li class="nav-item">-->
+                                        <!--<a class="nav-link tm-nav-link" href="gallery.html">Gallery</a>-->
+                                    <!--</li>-->
+                                    <!--<li class="nav-item">-->
+                                        <!--<a class="nav-link tm-nav-link" href="contact.html">Contact</a>-->
+                                    <!--</li>-->
+                                <!--</ul>-->
+                                <!--&lt;!&ndash; Links &ndash;&gt;-->
+                            <!--</div>-->
+                            <!--&lt;!&ndash; Collapsible content &ndash;&gt;-->
+                        <!--</nav>-->
+                        <!--&lt;!&ndash;/.Navbar&ndash;&gt;-->
+                    <!--</div> &lt;!&ndash; col &ndash;&gt;-->
+                <!--</div> &lt;!&ndash; row &ndash;&gt;-->
+            <!--</div> &lt;!&ndash; container fluid &ndash;&gt;-->
+        <!--</div> &lt;!&ndash; tm-site-header-overlay &ndash;&gt;-->
+        <!--<div class="tm-header-stripe w-100"></div>-->
+    <!--</div>-->
+    <!--<div class="tm-container">-->
+        <!--<div class="parallax-window" data-parallax="scroll" data-image-src="{% static 'img/real-dynamic-banner-01.jpg' %}">-->
+        <!--</div>-->
+    <!--</div>-->
+
+    <!--<div class="tm-container bg-white">-->
+        <!--<div class="tm-header-stripe w-100"></div>-->
+        <!--<div class="container-fluid">-->
+            <!--&lt;!&ndash;Intro&ndash;&gt;-->
+            <!--<section class="row tm-mb-1">-->
+                <!--<h2 class="col-12 text-center tm-text-primary tm-my-1 tm-intro-text">Introducing the real dynamic</h2>-->
+                <!--<div class="col-lg-4 text-center">-->
+                    <!--<div class="tm-box-1">-->
+                        <!--<i class="fas fa-truck-moving fa-4x tm-icon-1"></i>-->
+                        <!--<h3 class="tm-h3 tm-text-primary">Real Dynamic HTML Template</h3>-->
+                        <!--<p>This is a responsive 100% fluid-width layout that you can use for your business or commercial websites. Just go to TemplateMo and download the template now.</p>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="col-lg-4 text-center">-->
+                    <!--<div class="tm-box-1">-->
+                        <!--<i class="fas fa-box-open fa-4x tm-icon-1"></i>-->
+                        <!--<h3 class="tm-h3 tm-text-primary">New Marketing Strategies</h3>-->
+                        <!--<p>Please do not redistribute our template on any website that provides downloadable template ZIP files. -->
+                        <!--<a rel="nofollow" href="https://templatemo.com/contact" target="_parent">Contact us</a> for more info.</p>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="col-lg-4 text-center">-->
+                    <!--<div class="tm-box-1">-->
+                        <!--<i class="fas fa-people-carry fa-4x tm-icon-1"></i>-->
+                        <!--<h3 class="tm-h3 tm-text-primary">Develop Futuristic Ideas</h3>-->
+                        <!--<p>Morbi tristique metus mauris, vitae tempor elit molestie egestas. Integer id tristique leo. Vivamus mattis lobortis accumsan.</p>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</section>-->
+
+            <!--&lt;!&ndash; Services &ndash;&gt;-->
+            <!--<div class="row tm-mb-1">-->
+                <!--<div class="col-lg-4">-->
+                    <!--<div class="tm-bg-gray tm-box-2">-->
+                        <!--<i class="fas fa-3x fa-sign tm-mb-3"></i>-->
+                        <!--<h3 class="tm-text-primary tm-h3">What can we do for you?</h3>-->
+                        <!--<p class="tm-mb-4">Pellentesque sodales accumsan sem, vel efficitur arcu blandit sed. In feugiat dolor id sem interdum dignissim.</p>-->
+                        <!--<ul class="tm-mb-4">-->
+                            <!--<li>.01 Fusce aliquam aliquam</li>-->
+                            <!--<li>.02 Bibendum quam elementum</li>-->
+                            <!--<li>.03 Nam dapibus diam</li>-->
+                            <!--<li>.04 Lobortis ligula convallis</li>-->
+                            <!--<li>.05 Etiam interdum erat</li>-->
+                        <!--</ul>-->
+                        <!--<a href="#" class="d-block text-right btn-pad btn-text">More Details...</a>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="col-lg-4">-->
+                    <!--<i class="fas fa-mobile-alt fa-5x tm-icon-2 d-block text-center"></i>-->
+                    <!--<div class="tm-bg-gray tm-box-2">-->
+                        <!--<h3 class="tm-text-primary tm-h3">Mobile friendly Template</h3>-->
+                        <!--<p class="tm-mb-5">Aenean vel sollicitudin sem. Nullam vulputate, sem ut efficitur accumsan, nisl ipsum dictum velit, sed dictum  lorem nibh eu nisl. Nulla nulla tellus, rutrum vitae libero vitae.</p>-->
+                        <!--<div class="text-center">-->
+                            <!--<a href="#" class="btn btn-primary rounded-0">Read More</a>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="col-lg-4">-->
+                    <!--<i class="fas fa-sms fa-5x tm-icon-2 d-block text-center"></i>-->
+                    <!--<div class="tm-bg-gray tm-box-2">-->
+                        <!--<h3 class="tm-text-primary tm-h3">Your Flexible Workplace</h3>-->
+                        <!--<p class="tm-mb-5">Mauris fermentum semper varius. Pellentesque semper diam a orci lobortis sagittis. Integer sapien lorem, elementum tempor commodo et, scelerisque eget augue.</p>-->
+                        <!--<div class="text-center"><a href="#" class="btn btn-secondary rounded-0">Read More</a></div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+
+            <!--&lt;!&ndash; Testimonials &ndash;&gt;-->
+            <!--<div class="tm-mb-2">-->
+                <!--<h2 class="text-center tm-text-primary tm-h2-big tm-mb-6">Our Happy Customers</h2>-->
+                <!--&lt;!&ndash; Carousel &ndash;&gt;-->
+                <!--<div class="col-lg-6 mx-auto tm-mb-4">-->
+                    <!--<div class="tm-carousel">-->
+                        <!--<div class="text-center">-->
+                            <!--<h3 class="tm-mb-4 tm-text-dark-gray">Vivamus vitae condimentum</h3>-->
+                            <!--<p class="tm-mb-4">Vestibulum condimentum, elit nec tempus suscipit, enim nibh aliquam eros, sit amet iaculis nibh nibh at dolor. Cras imperdiet, dolor posuere dignissim dapibus, tortor arcu pellentesque orci, et mattis libero justo semper neque.</p>-->
+                            <!--<div class="rating">-->
+                                <!--<span class="star fas fa-star checked"></span>-->
+                                <!--<span class="star fas fa-star checked"></span>-->
+                                <!--<span class="star fas fa-star checked"></span>-->
+                                <!--<span class="star fas fa-star checked"></span>-->
+                                <!--<span class="star fas fa-star"></span>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="text-center">-->
+                            <!--<h3 class="tm-mb-4 tm-text-dark-gray">Cras imperdiet, dolor posuere</h3>-->
+                            <!--<p class="tm-mb-4">Elit nec tempus suscipit, enim nibh aliquam eros, sit amet iaculis nibh Vestibulum condimentum, nibh at dolor.Vivamus vitae condimentum dignissim dapibus, tortor arcu pellentesque orci, et mattis libero justo semper neque.</p>-->
+                            <!--<div class="rating">-->
+                                <!--<span class="star fas fa-star checked"></span>-->
+                                <!--<span class="star fas fa-star checked"></span>-->
+                                <!--<span class="star fas fa-star checked"></span>-->
+                                <!--<span class="star fas fa-star checked"></span>-->
+                                <!--<span class="star fas fa-star checked"></span>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="text-center">-->
+                            <!--<h3 class="tm-mb-4 tm-text-dark-gray">Elit nec tempus suscipit</h3>-->
+                            <!--<p class="tm-mb-4">Cras imperdiet, dolor posuere dignissim dapibus, tortor arcu pellentesque orci, et mattis libero justo semper neque.Vivamus vitae condimentum. Elit nec tempus suscipit, enim nibh aliquam eros, sit amet iaculis nibh nibh at dolor. </p>-->
+                            <!--<div class="rating">-->
+                                <!--<span class="star fas fa-star checked"></span>-->
+                                <!--<span class="star fas fa-star checked"></span>-->
+                                <!--<span class="star fas fa-star checked"></span>-->
+                                <!--<span class="star fas fa-star checked"></span>-->
+                                <!--<span class="star fas fa-star"></span>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="text-center">-->
+                            <!--<h3 class="tm-mb-4 tm-text-dark-gray">Tempus suscipit, enim</h3>-->
+                            <!--<p class="tm-mb-4">Tortor arcu pellentesque orci, et mattis libero justo semper neque. Vestibulum condimentum, elit nec tempus  suscipit, enim nibh aliquam eros, sit amet iaculis nibh nibh at dolor. Cras imperdiet, dolor posuere dignissim dapibus. </p>-->
+                            <!--<div class="rating">-->
+                                <!--<span class="star fas fa-star checked"></span>-->
+                                <!--<span class="star fas fa-star checked"></span>-->
+                                <!--<span class="star fas fa-star checked"></span>-->
+                                <!--<span class="star fas fa-star checked"></span>-->
+                                <!--<span class="star fas fa-star"></span>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="text-center">-->
+                            <!--<h3 class="tm-mb-4 tm-text-dark-gray">Dolor posuere dignissim dapibus</h3>-->
+                            <!--<p class="tm-mb-4">Posuere dignissim dapibus, tortor arcu pellentesque orci, et mattis libero justo semper neque. Vestibulum condimentum, elit nec tempus suscipit, enim nibh aliquam eros, sit amet iaculis nibh nibh at dolor. Vivamus vitae condimentum dolor.</p>-->
+                            <!--<div class="rating">-->
+                                <!--<span class="star fas fa-star checked"></span>-->
+                                <!--<span class="star fas fa-star checked"></span>-->
+                                <!--<span class="star fas fa-star checked"></span>-->
+                                <!--<span class="star fas fa-star checked"></span>-->
+                                <!--<span class="star fas fa-star"></span>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="row tm-mb-7">-->
+                <!--<div class="col-lg-3 col-sm-6 mb-lg-0 mb-5">-->
+                    <!--<h3 class="tm-text-primary tm-mb-4">Useful Readings</h3>-->
+                    <!--<nav class="tm-nav-secondary">-->
+                        <!--<ul>-->
+                            <!--<li><a href="#">Laoreet eget justo</a></li>-->
+                            <!--<li><a href="#">Rhoncus volupat turpi</a></li>-->
+                            <!--<li><a href="#">Nulla euismod erat</a></li>-->
+                            <!--<li><a href="#">Donc a laoreet ipsum</a></li>-->
+                        <!--</ul>-->
+                    <!--</nav>-->
+                <!--</div>-->
+                <!--<div class="col-lg-3 col-sm-6 mb-lg-0 mb-5">-->
+                    <!--<h3 class="tm-text-primary tm-mb-4">Our Pages</h3>-->
+                    <!--<nav class="tm-nav-secondary">-->
+                        <!--<ul>-->
+                            <!--<li><a href="#">Background</a></li>-->
+                            <!--<li><a href="#">Our Mission</a></li>-->
+                            <!--<li><a href="#">Pricing</a></li>-->
+                            <!--<li><a href="#">Features</a></li>-->
+                        <!--</ul>-->
+                    <!--</nav>-->
+                <!--</div>-->
+                <!--<div class="col-lg-3 col-sm-6 mb-lg-0 mb-5">-->
+                    <!--<h3 class="tm-text-primary tm-mb-4">Main Menu</h3>-->
+                    <!--<nav class="tm-nav-secondary">-->
+                        <!--<ul>-->
+                            <!--<li><a href="#">Home</a></li>-->
+                            <!--<li><a href="#">About</a></li>-->
+                            <!--<li><a href="#">Gallery</a></li>-->
+                            <!--<li><a href="#">Contact</a></li>-->
+                        <!--</ul>-->
+                    <!--</nav>-->
+                <!--</div>-->
+                <!--<div class="col-lg-3 col-sm-6 mb-lg-0 mb-5">-->
+                    <!--<h3 class="tm-text-primary tm-mb-4">About Real Dynamic</h3>-->
+                    <!--<p class="tm-mb-4">Ut non orci semper, semper velit sit amet, ornare velit. Vestibulum id ipsum et justo bibendum ornare id sit amet  arcu. Integer placerat magna.</p>-->
+                    <!--<div>-->
+                        <!--<a href="https://youtube.com" class="tm-social-link"><i class="fab fa-youtube tm-social-icon"></i></a>-->
+                        <!--<a href="https://fb.com/templatemo" class="tm-social-link"><i class="fab fa-facebook tm-social-icon"></i></a>-->
+                        <!--<a href="https://twitter.com" class="tm-social-link"><i class="fab fa-twitter tm-social-icon"></i></a>-->
+                        <!--<a href="https://instagram.com" class="tm-social-link"><i class="fab fa-instagram tm-social-icon"></i></a>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<footer class="row">-->
+                <!--<p class="mb-0 w-100 text-center col-12">-->
+                    <!--Company &copy; 2020 Company Name -->
+                    <!---->
+                    <!-- - Real Dynamic by <a rel="nofollow" href="https://templatemo.com" class="tm-text-link">TemplateMo</a>-->
+                <!--</p>-->
+            <!--</footer>-->
+        <!--</div> &lt;!&ndash; container-fluid &ndash;&gt;-->
+    <!--</div> &lt;!&ndash; tm-container &ndash;&gt;-->
+
+    <!--<script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>-->
+    <!--<script src="{% static 'js/bootstrap.min.js' %}"></script>-->
+    <!--<script src="{% static 'js/parallax.min.js' %}"></script> &lt;!&ndash; https://pixelcog.github.io/parallax.js/ &ndash;&gt;-->
+    <!--<script src="{% static 'slick/slick.min.js' %}"></script>-->
+    <!--<script src="{% static 'js/tooplate-script.js' %}"></script>-->
+    <!--<script>-->
+        <!--$(document).ready(function () {-->
+            <!--// Testimonials carousel-->
+            <!--$('.tm-carousel').slick({-->
+                <!--dots: true,-->
+                <!--infinite: false,-->
+                <!--speed: 300,-->
+                <!--slidesToShow: 1,-->
+                <!--slidesToScroll: 1-->
+            <!--});-->
+        <!--});-->
+    <!--</script>-->
+</body>
+</html>

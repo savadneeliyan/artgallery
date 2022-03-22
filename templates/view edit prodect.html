@@ -1,0 +1,190 @@
+{% load static %}
+<html lang="zxx">
+
+<head>
+
+
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>onlinecart</title>
+    <link rel="icon" href="{% static 'assets/img/favicon.png' %}">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <!-- animate CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/animate.css' %}">
+    <!-- owl carousel CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/owl.carousel.min.css' %}">
+    <!-- font awesome CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/all.css' %}">
+    <!-- flaticon CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/themify-icons.css' %}">
+    <!-- font awesome CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/magnific-popup.css' %}">
+    <!-- swiper CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/slick.css' %}">
+    <!-- style CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+</head>
+
+<body>
+    <!--::header part start::-->
+    <header class="main_menu home_menu">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                   <nav class="navbar navbar-expand-lg navbar-light">
+                        <a class="navbar-brand" href="index.html"> <img src="{% static 'assets/img/logo1.png' %}" alt="logo"> </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="menu_icon"><i class="glyphicon glyphicon-menu-hamburger"></i></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse main-menu-item" id="navbarSupportedContent">
+
+
+
+                            <ul>
+
+
+
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/adminindex">home</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="hearer_icon d-flex">
+
+
+
+
+
+
+                                <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <div class="single_product">
+
+                                    </div>
+                                </div> -->
+
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="search_input" id="search_input_box">
+            <div class="container ">
+                <form class="d-flex justify-content-between search-inner">
+                    <input type="text" class="form-control" id="search_input" placeholder="Search Here">
+                    <button type="submit" class="btn"></button>
+                    <span class="ti-close" id="close_search" title="Close Search"></span>
+                </form>
+            </div>
+        </div>
+    </header>
+    <!-- Header part end-->
+
+
+
+
+
+     <!--product_list start-->
+    <section class="product_list section_padding">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <div class="section_tittle text-center">
+                        <h2> <span>edit {{data.name}}</span></h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="product_list_slider owl-carousel">
+                        <div class="single_product_list_slider">
+                           <form name="form1" method="post" action="{% url 'artupdate' %}">
+                                <div class="row align-items-center justify-content-between">
+
+
+                                            <div class="col-lg-3 col-sm-6">
+                                                <div class="single_product_item">
+                                                    <!--<img src="{% static 'assets/img/product/product_8.png' %}" alt="">-->
+                                                    <img src="{{data.art.url}}" width="100"/>&nbsp;
+
+                                                    <div class="single_product_text">
+                                                        <h4><input type="text" name="textfield" class="form-control form-control-lg" value="{{data.name}}"/></h4>
+                                                        <h3><input type="text" name="textfield2" class="form-control form-control-lg" value="{{data.price}}" /></h3>
+                                                       <h3> <th scope="row"><input type="text" class="form-control form-control-lg" name="textfield6" value="{{data.discription}}" /></th></h3>
+                                                        <h3> <th scope="row"><input type="text" class="form-control form-control-lg" name="textfield3" value="{{data.quantity}}" /></th></h3>
+                                                        <h3> <th colspan="2" scope="row"><input type="submit" name="Submit"  class="button"  value="add" /></th></h3>
+
+
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+
+                            </div>
+                           </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- product_list part start-->
+<!---->
+
+
+    <!-- subscribe_area part start-->
+    <!--::subscribe_area part end::-->
+
+    <!-- subscribe_area part start-->
+    <!--::subscribe_area part end::-->
+
+    <!--::footer_part start::-->
+    <!--::footer_part end::-->
+
+    <!-- jquery plugins here-->
+    <script src="{% static 'assets/js/jquery-1.12.1.min.js' %}"></script>
+    <!-- popper js -->
+    <script src="{% static 'assets/js/popper.min.js' %}"></script>
+    <!-- bootstrap js -->
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+    <!-- easing js -->
+    <script src="{% static 'assets/js/jquery.magnific-popup.js' %}"></script>
+    <!-- swiper js -->
+    <script src="{% static 'assets/js/swiper.min.js' %}"></script>
+    <!-- swiper js -->
+    <script src="{% static 'assets/js/masonry.pkgd.js' %}"></script>
+    <!-- particles js -->
+    <script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.nice-select.min.js' %}"></script>
+    <!-- slick js -->
+    <script src="{% static 'assets/js/slick.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.counterup.min.js' %}"></script>
+    <script src="{% static 'assets/js/waypoints.min.js' %}"></script>
+    <script src="{% static 'assets/js/contact.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.ajaxchimp.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.form.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.validate.min.js' %}"></script>
+    <script src="{% static 'assets/js/mail-script.js' %}"></script>
+    <!-- custom js -->
+    <script src="{% static 'assets/js/custom.js' %}"></script>
+</body>
+
+</html>
+
+

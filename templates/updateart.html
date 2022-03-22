@@ -1,0 +1,35 @@
+{% extends 'view edit prodect.html' %}
+{% block body %}
+
+<body>
+<form action="{% url 'artupdate' %}" method="post" enctype="multipart/form-data" name="form1" id="form1">
+  <table width="200" border="1">
+    <tr>
+      <th scope="row">art</th>
+      <th scope="row"><input type="file" name="file"/>
+      <img src="{{data.art.url}}" width="100"/>
+      </th>
+    </tr>
+    <tr>
+      <th scope="row">name</th>
+      <th scope="row"><input type="text" name="textfield" value="{{data.name}}"/></th>
+    </tr>
+    <tr>
+      <th scope="row">price</th>
+      <th scope="row"><input type="text" name="textfield2" value="{{data.price}}" /></th>
+    </tr>
+    <tr>
+      <th scope="row">discripton</th>
+      <th scope="row"><input type="text" name="textfield6" value="{{data.discription}}" /></th>
+    </tr>
+    <tr>
+      <th scope="row">quantity</th>
+      <th scope="row"><input type="text" name="textfield3" value="{{data.quantity}}" /></th>
+    </tr>
+    <tr>
+      <th colspan="2" scope="row"><input type="submit" name="Submit" value="add" /></th>
+    </tr>
+  </table>
+</form>
+</body>
+{% endblock %}

@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <table width="200" border="1">
+    <tr>
+      <th scope="col">art&nbsp;</th>
+      <th scope="col">name</th>
+      <th scope="col">price</th>
+      <th scope="col">&nbsp;discription</th>
+      <th scope="col">type</th>
+      <th scope="col">&nbsp;</th>
+    </tr>
+    {% for i in data %}
+    <tr>
+      <td><img src="{{i.art.url}}" width="100"/></td>
+      <td>{{i.name}}&nbsp;</td>
+      <td>&nbsp;{{i.price}}</td>
+      <td>&nbsp;{{i.discription}}</td>
+      <td>{{i.type}}</td>
+      <td><a href="{% url 'edit1' id=i.id %}">edit<br>
+	  <a href="{% url 'delete' id=i.id %}">delete</a></td>
+    </tr>
+    {% endfor %}
+  </table>
+</form>
+</body>
+</html>

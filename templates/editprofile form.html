@@ -1,0 +1,133 @@
+{% load static %}
+<html lang="en">
+<head>
+	<title>online cart</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="{% static 'login form/images/icons/logo1.png' %}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'login form/vendor/bootstrap/css/bootstrap.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'login form/fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'login form/fonts/iconic/css/material-design-iconic-font.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'login form/vendor/animate/animate.css' %}">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="{% static 'login form/vendor/css-hamburgers/hamburgers.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'login form/vendor/animsition/css/animsition.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'login form/vendor/select2/select2.min.css' %}">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="{% static 'login form/vendor/daterangepicker/daterangepicker.css' %}' }">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'login form/css/util.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'login form/css/main.css' %}">
+<!--===============================================================================================-->
+</head>
+
+		<form id="form1" name="form1" method="post" action="/submit">
+
+			<div class="limiter">
+				<div class="container-login100">
+					<div class="wrap-login100">
+						<!--<form class="login100-form validate-form">-->
+							<!--<span class="login100-form-title p-b-26">-->
+
+							<!--</span>-->
+							<span class="login100-form-title p-b-48">
+								<a class="navbar-brand" href=""> <img src="{% static 'assets/img/logo1.png' %}" alt="logo"> </a>
+<!---->
+							</span>
+
+							<div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
+								<input class="input100" type="text" name="textfield"  value="{{data.firstname}}">
+							</div>
+<!---->
+
+							<div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
+								<input class="input100" type="text" name="textfield2"  value="{{data.lastname}}">
+							</div>
+
+
+							<div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
+
+								<input class="input100" type="text" name="textfield3" value="{{data.age}}">
+							</div>
+
+							<div class="p-4 " >
+
+								<input class="" name="radiobutton" type="radio" value="male"{% if data.gender == "male" %}checked{% endif %} />
+     							 male
+        						<input class="ml-5" name="radiobutton" type="radio" value="female"  {% if data.gender == "female" %}checked{% endif %} />
+								female
+							</div>
+
+							<div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
+								<input class="input100" type="text" name="textfield4"   value="{{data.place}}">
+							</div>
+
+							<div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
+								<input class="input100" type="text" name="textfield5"  value="{{data.post}}">
+							</div>
+
+							<div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
+								<input class="input100" type="text" name="textfield6"   value="{{data.pin}}">
+							</div>
+
+							<div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
+								<input class="input100" type="text" name="textfield7"  value="{{data.email}}">
+							</div>
+
+							<div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
+								<input class="input100" type="text" name="textfield8"   value="{{data.phone}}">
+								
+							</div>
+
+
+
+
+							<div class="container-login100-form-btn">
+								<div class="wrap-login100-form-btn">
+									<div class="login100-form-bgbtn"></div>
+									<button class="login100-form-btn">
+										sign up
+									</button>
+								</div>
+							</div>
+
+
+
+
+
+
+
+
+					</div>
+				</div>
+			</div>
+		</form>
+
+	<div id="dropDownSelect1"></div>
+	
+<!--===============================================================================================-->
+	<script src="{% static 'login form/vendor/jquery/jquery-3.2.1.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'login form/vendor/animsition/js/animsition.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'login form/vendor/bootstrap/js/popper.js' %}"></script>
+	<script src="{% static 'login form/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'login form/vendor/select2/select2.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'login form/vendor/daterangepicker/moment.min.js' %}"></script>
+	<script src="{% static 'login form/vendor/daterangepicker/daterangepicker.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'login form/vendor/countdowntime/countdowntime.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'login form/js/main.js' %}"></script>
+
+</body>
+</html>
